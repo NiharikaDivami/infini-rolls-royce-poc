@@ -37,13 +37,8 @@ export default function ContentSection({
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: section,
-
-      // 🔑 start ONLY when fully visible
       start: "bottom bottom",
-
-      // 🔑 total scroll space (3 phases)
-      end: "+=900",
-
+      end: "+=400",  // Shorter duration - unpins immediately after animation
       scrub: true,
       pin: true,
       pinSpacing: true,
@@ -52,28 +47,15 @@ export default function ContentSection({
     },
   });
 
-  /* -------------------------
-     PHASE 1 — lock section
-     (no animation)
-  -------------------------- */
-  tl.to({}, { duration: 1 });
-
-  /* -------------------------
-     PHASE 2 — animate border
-  -------------------------- */
+  // Animate border to zero
   tl.to(border, {
     borderLeftWidth: 0,
     borderRightWidth: 0,
-    borderTopWidth: 198,    
+    borderTopWidth: 0,    
     borderBottomWidth: 0,   
     ease: "power2.out",
     duration: 1,
   });
-
-  /* -------------------------
-     PHASE 3 — hold final state
-  -------------------------- */
-  tl.to({}, { duration: 1 });
 
   return () => {
     ScrollTrigger.getAll().forEach(t => t.kill());
