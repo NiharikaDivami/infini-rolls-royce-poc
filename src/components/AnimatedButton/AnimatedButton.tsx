@@ -43,13 +43,13 @@ export default function AnimatedButton({ children, className = '' }: AnimatedBut
 
   return (
     <button ref={buttonRef} className={`animated-button ${className}`}>
-      <svg className="animated-button__svg" viewBox="0 0 180 60" preserveAspectRatio="none">
+      <svg className="animated-button__svg" viewBox="0 0 200 70" preserveAspectRatio="none">
         <path
           ref={pathRef}
-          d="M10,10 L170,10 L170,50 L10,50 Z"
+          d="M35,1 L165,1 Q199,1 199,35 L199,35 Q199,69 165,69 L35,69 Q1,69 1,35 L1,35 Q1,1 35,1 Z"
           fill="none"
           stroke="white"
-          strokeWidth="1"
+          strokeWidth="3"
         />
       </svg>
       <span className="animated-button__text">{children}</span>

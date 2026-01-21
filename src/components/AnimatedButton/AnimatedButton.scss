@@ -2,16 +2,14 @@
   position: relative;
   background: transparent;
   border: none;
-  color: white;
   padding: 1rem 3rem;
   cursor: pointer;
   font-weight: 300;
   overflow: visible;
-  transition: none;
+  transition: color 0.3s ease;
 
   &:hover {
     background: transparent;
-    color: white;
   }
 
   &__svg {

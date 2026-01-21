@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import AnimatedButton from '@/components/AnimatedButton/AnimatedButton';
+import BorderButton from '@/components/BorderButton/BorderButton';
 import './PhantomCentenary.scss';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -64,7 +64,9 @@ export default function PhantomCentenary({
           This is a statement that honours Phantom's legacy, defines its present, and projects the principles that will shape the model's next 100 years and beyond.
         </p>
         
-        <AnimatedButton className="phantom-centenary__cta">CRAFT YOUR VISION</AnimatedButton>
+        <BorderButton variant="draw meet" className="phantom-centenary__cta">
+          CRAFT YOUR VISION
+        </BorderButton>
       </div>
     </section>
   );
