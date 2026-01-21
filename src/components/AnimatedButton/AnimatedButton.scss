@@ -1,0 +1,30 @@
+.animated-button {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  font-weight: 300;
+  overflow: visible;
+  transition: none;
+
+  &:hover {
+    background: transparent;
+    color: white;
+  }
+
+  &__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+  }
+}

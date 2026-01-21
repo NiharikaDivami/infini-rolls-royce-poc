@@ -2,6 +2,7 @@
 
 import Navbar from '@/components/Navbar/Navbar';
 import HeroSection from '@/components/HeroSection/HeroSection';
+import PhantomCentenary from '@/components/PhantomCentenary/PhantomCentenary';
 import ContentSection from '@/components/ContentSection/ContentSection';
 import ExpandedSection from '@/components/ExpandSectiom/ExpandedSection';
 
@@ -12,13 +13,9 @@ export default function Home() {
       <main>
         <HeroSection />
         
-        <ContentSection
+        <PhantomCentenary
           sectionClass="section-two"
-          title="CENTENARY COLLECTION"
-          subtitle="A Legacy Redefined"
-          description="Experience the pinnacle of automotive luxury with our exclusive Centenary Collection. Each vehicle is meticulously crafted to embody 100 years of uncompromising excellence and timeless elegance."
-          imageSrc="/assets/centenary-background.png"
-          imageAlt="Centenary Collection"
+          backgroundImage="/assets/centenary-background.png"
         />
 
         <ExpandedSection

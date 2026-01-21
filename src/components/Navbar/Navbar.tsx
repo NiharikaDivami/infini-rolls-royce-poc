@@ -14,6 +14,17 @@ export default function Navbar() {
     const navbar = navRef.current;
     if (!navbar) return;
 
+    // Change navbar background when section-two comes into view
+    gsap.to(navbar, {
+      background: 'linear-gradient(0deg, transparent 15%, rgba(0, 0, 0, .25))',
+      scrollTrigger: {
+        trigger: '.section-two',
+        start: 'top bottom',
+        end: 'top top',
+        scrub: 0.1,
+      },
+    });
+
     gsap.to(navbar, {
       height: '60px',
       scrollTrigger: {
