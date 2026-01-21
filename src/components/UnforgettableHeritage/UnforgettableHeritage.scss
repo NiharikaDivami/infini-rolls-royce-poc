@@ -1,0 +1,41 @@
+.unforgettable-heritage {
+  min-height: 600px;
+  max-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding-top: 100px;
+  scroll-snap-align: start;
+  padding: 4rem 2rem;
+
+  .content-wrapper {
+    max-width: 800px;
+    text-align: center;
+    color: #333;
+  }
+
+  .title {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    margin-bottom: 3rem;
+    color: #333;
+  }
+
+  .intro-text {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+  .description-text {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+  }
+}

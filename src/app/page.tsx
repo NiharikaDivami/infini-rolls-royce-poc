@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection/HeroSection';
 import PhantomCentenary from '@/components/PhantomCentenary/PhantomCentenary';
 import ContentSection from '@/components/ContentSection/ContentSection';
 import ExpandedSection from '@/components/ExpandSectiom/ExpandedSection';
+import UnforgettableHeritage from '@/components/UnforgettableHeritage/UnforgettableHeritage';
 
 export default function Home() {
   return (
@@ -23,15 +24,17 @@ export default function Home() {
           imageSrc="/assets/expanded-image-background.webp"
           imageAlt="Bespoke Interior"
           reverse={true}
+          backgroundColor="#000"
         />
 
-        <ContentSection
-          sectionClass="section-four"
-          title="UNPARALLELED PERFORMANCE"
-          subtitle="Power Meets Grace"
-          description="Beneath the elegant exterior lies engineering excellence. The Phantom delivers whisper-quiet power and effortless performance, ensuring every journey is as memorable as the destination."
+        <UnforgettableHeritage sectionClass="section-four" />
+
+        <ExpandedSection
+          sectionClass="section-five"
           imageSrc="/assets/expanded-image-bg.webp"
-          imageAlt="Performance Excellence"
+          imageAlt="Phantom Centenary Interior"
+          reverse={false}
+          backgroundColor="#fff"
         />
       </main>
     </>

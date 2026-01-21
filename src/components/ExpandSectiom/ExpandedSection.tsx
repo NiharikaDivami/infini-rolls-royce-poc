@@ -12,6 +12,7 @@ interface ContentSectionProps {
   imageAlt: string;
   sectionClass: string;
   reverse?: boolean;
+  backgroundColor?: string;
 }
 
 export default function ContentSection({
@@ -19,6 +20,7 @@ export default function ContentSection({
   imageAlt,
   sectionClass,
   reverse = false,
+  backgroundColor = "#000",
 }: ContentSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const imageContainerRef = useRef<HTMLDivElement>(null);
@@ -64,7 +66,7 @@ export default function ContentSection({
 
 
   return (
-    <section ref={sectionRef}>
+    <section ref={sectionRef} style={{ backgroundColor }}>
       <div className={`content-section__container ${reverse ? "reverse" : ""}`}>
         <div
           ref={imageContainerRef}
@@ -76,7 +78,7 @@ export default function ContentSection({
             alt={imageAlt}
             className="content-section__image"
           />
-          <div className="content-section__border-frame" />
+          <div className="content-section__border-frame" style={{ borderColor: backgroundColor }} />
         </div>
       </div>
     </section>
