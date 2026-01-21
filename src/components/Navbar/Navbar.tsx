@@ -105,7 +105,7 @@ export default function Navbar() {
         </div>
         <div className="navbar__right">
           <button className="navbar__dealer-btn">
-            <span className="navbar__search-icon">🔍</span>
+            <span className="navbar__search-icon">🔍︎</span>
             <span className="navbar__dealer-text">FIND A DEALER</span>
           </button>
         </div>
