@@ -3,6 +3,7 @@
 import Navbar from '@/components/Navbar/Navbar';
 import HeroSection from '@/components/HeroSection/HeroSection';
 import ContentSection from '@/components/ContentSection/ContentSection';
+import ExpandedSection from '@/components/ExpandSectiom/ExpandedSection';
 
 export default function Home() {
   return (
@@ -20,12 +21,9 @@ export default function Home() {
           imageAlt="Centenary Collection"
         />
 
-        <ContentSection
+        <ExpandedSection
           sectionClass="section-three"
-          title="BESPOKE CRAFTSMANSHIP"
-          subtitle="Tailored to Perfection"
-          description="Every detail is a testament to our master craftsmen. From the finest leathers to hand-polished wood veneers, your Phantom is uniquely yours, reflecting your personal vision of luxury."
-          imageSrc="/assets/expanded-image-background.png"
+          imageSrc="/assets/expanded-image-background.webp"
           imageAlt="Bespoke Interior"
           reverse={true}
         />
