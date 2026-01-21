@@ -64,7 +64,8 @@ export default function ContentSection({
   tl.to(border, {
     borderLeftWidth: 0,
     borderRightWidth: 0,
-    borderTopWidth: 198,
+    borderTopWidth: 198,    
+    borderBottomWidth: 0,   
     ease: "power2.out",
     duration: 1,
   });
@@ -81,7 +82,7 @@ export default function ContentSection({
 
 
   return (
-    <section ref={sectionRef} className={`content-section ${sectionClass}`}>
+    <section ref={sectionRef}>
       <div className={`content-section__container ${reverse ? "reverse" : ""}`}>
         <div
           ref={imageContainerRef}
