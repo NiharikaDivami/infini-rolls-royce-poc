@@ -1,168 +1,48 @@
 .button {
   --transition-speed: 0.5s;
+  --cyan: white;
   background: transparent;
   border: 1px solid white;
   color: white;
   cursor: pointer;
+  min-height: 46px;
   font-weight: 300;
-  padding: 1rem 3rem;
+  padding: 0px 16px;
   position: relative;
+  width: 276px;
   border-radius: 50px;
-  transition: color var(--transition-speed);
-  
-  &::before,
-  &::after {
-    box-sizing: inherit;
-    content: '';
+  transition: color 0.25s, border-color 0.25s ease;
+  overflow: hidden;
+
+  &:hover {
+    border-color: transparent;
+    color: var(--cyan);
+  }
+
+  // SVG border animation
+  svg {
     position: absolute;
-    border: 1px solid transparent;
-    width: 0;
-    height: 0;
-    border-radius: 50px;
-  }
-
-  &::before {
     top: 0;
     left: 0;
-  }
-
-  &::after {
-    bottom: 0;
-    right: 0;
-  }
-}
-
-.draw {
-  transition: color var(--transition-speed);
-
-  &::before,
-  &::after {
     width: 100%;
     height: 100%;
+    pointer-events: none;
+    
+    path {
+      d: path("M 0.5 23 A 22.5 22.5 0 0 1 23 0.5 L 253 0.5 A 22.5 22.5 0 0 1 275.5 23 A 22.5 22.5 0 0 1 253 45.5 L 23 45.5 A 22.5 22.5 0 0 1 0.5 23");
+      stroke-dasharray: 603.372;
+      stroke-dashoffset: 603.372;
+      stroke: var(--cyan);
+      stroke-width: 1;
+      stroke-linecap: square;
+      stroke-linejoin: round;
+      fill: transparent;
+      transition: stroke-dashoffset 1s ease-in-out;
+    }
   }
 
-  &::before {
-    border-top-color: white;
-    border-right-color: white;
-    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
-  }
-
-  &::after {
-    border-bottom-color: white;
-    border-left-color: white;
-    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
-  }
-
-  &:hover::before,
-  &:hover::after {
-    width: 100%;
-    height: 100%;
-  }
-
-  &:hover::before {
-    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
-  }
-
-  &:hover::after {
-    border-color: white;
-    transition: border-color 0s ease-out 0s, width 0.25s ease-out 0s, height 0.25s ease-out 0.25s;
+  &:hover svg path {
+    stroke-dashoffset: 0;
   }
 }
 
-.meet {
-  &::before {
-    top: 0;
-    left: 0;
-  }
-
-  &::after {
-    bottom: 0;
-    right: 0;
-  }
-
-  &:hover::before,
-  &:hover::after {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.center {
-  &::before,
-  &::after {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transform-origin: center;
-  }
-
-  &::before {
-    border-top-color: white;
-    border-bottom-color: white;
-    transform: scale3d(0, 1, 1);
-  }
-
-  &::after {
-    border-left-color: white;
-    border-right-color: white;
-    transform: scale3d(1, 0, 1);
-  }
-
-  &:hover::before,
-  &:hover::after {
-    transform: scale3d(1, 1, 1);
-    transition: transform var(--transition-speed);
-  }
-}
-
-.spin {
-  width: 10rem;
-  height: 3.5rem;
-  border-radius: 50px;
-
-  &::before,
-  &::after {
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-  }
-
-  &::before {
-    border-left-color: white;
-    border-top-color: white;
-    transform: rotate(0deg);
-    transition: transform var(--transition-speed) ease-out;
-  }
-
-  &::after {
-    border-right-color: white;
-    border-bottom-color: white;
-    transform: rotate(0deg);
-    transition: transform var(--transition-speed) ease-out;
-  }
-
-  &:hover::before {
-    transform: rotate(180deg);
-  }
-
-  &:hover::after {
-    transform: rotate(-180deg);
-  }
-}
-
-.circle {
-  border-radius: 100%;
-
-  &::before,
-  &::after {
-    border-radius: 100%;
-  }
-}
-
-.thick {
-  &::before,
-  &::after {
-    border-width: 2px;
-  }
-}
