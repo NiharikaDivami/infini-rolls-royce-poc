@@ -15,22 +15,25 @@ export default function HeroSection() {
     if (!hero) return;
 
     // Blur effect on scroll
-    gsap.to(hero, {
-      filter: 'blur(8px)',
-      scrollTrigger: {
-        trigger: '.section-two',
-        start: 'top bottom',
-        end: 'top center',
-        scrub: true,
-      },
-    });
+    const nextElement = hero.nextElementSibling;
+    if (nextElement) {
+      gsap.to(hero, {
+        filter: 'blur(8px)',
+        scrollTrigger: {
+          trigger: nextElement,
+          start: 'top bottom',
+          end: 'top center',
+          scrub: true,
+        },
+      });
+    }
   }, []);
 
   return (
     <section ref={heroRef} className="hero">
       <div className="hero__background">
         <img
-          src="/assets/BannerCarImage.webp"
+          src="/assets/one.png"
           alt="Rolls-Royce Phantom Centenary"
           className="hero__image"
         />

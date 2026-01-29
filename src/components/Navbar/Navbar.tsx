@@ -85,12 +85,12 @@ export default function Navbar() {
       <div className="navbar__container">
         <div className="navbar__logo">
           <img 
-            src="/assets/rolls-royce-logo2.svg" 
+            src="/assets/new_logo.png" 
             alt="Rolls-Royce" 
             className="navbar__logo--wordmark"
           />
           <img 
-            src="/assets/rolls-royce-logo.svg" 
+            src="/assets/new_logo.png" 
             alt="Rolls-Royce Spirit of Ecstasy" 
             className="navbar__logo--emblem"
           />
